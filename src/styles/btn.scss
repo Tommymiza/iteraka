@@ -1,0 +1,17 @@
+button{
+    background: var(--primary);
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    justify-content: space-around;
+    font-size: 20px;
+    font-family: var(--fontText);
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover{
+        color: white;
+    }
+}
