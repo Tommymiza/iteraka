@@ -7,9 +7,24 @@ import About from "./components/About";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import i18n  from "i18next";
+import { initReactI18next, useTranslation } from "react-i18next";
+import { en_lang } from "./components/localize/en";
+import { fr_lang } from "./components/localize/fr";
+
+i18n.use(initReactI18next).init({
+  resources: {
+    en: { translation: en_lang },
+    fr: { translation: fr_lang },
+  },
+  lng: "fr",
+  fallbackLng: "fr",
+  interpolation: { escapeValue: false },
+});
 
 export const ActContext = createContext();
 function App() {
+  const { t } = useTranslation()
   const [connected, setConnected] = useState(true);
   const [user, setUser] = useState({ name: "Tommy" });
   const [width, setWidth] = useState(document.body.offsetWidth);
@@ -21,7 +36,7 @@ function App() {
   }, []);
   return (
     <ActContext.Provider
-      value={{ connected, user, width, setConnected, setUser }}
+      value={{ t, connected, user, width, setConnected, setUser }}
     >
       <BrowserRouter>
         <header>

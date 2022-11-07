@@ -1,22 +1,25 @@
 import { PublicRounded } from "@mui/icons-material";
-import React from "react";
+import React, {useContext} from "react";
 import "../styles/home.scss";
 import Btn from "./Outils/button";
+import { ActContext } from "../App";
+
 
 const Home = () => {
+  const { t } = useContext(ActContext)
   const handleClick = () => {
     document.querySelector("#content").scrollIntoView({ behavior: "smooth" });
   };
   return (
     <>
       <div id="home">
-        <h1>Bienvenue sur Teraka</h1>
+        <h1>{t("welcome")}</h1>
         <p>" Petite phrase d'amorce, ou dicton de Teraka "</p>
         <Btn
           action={handleClick}
-          text="Aller à"
+          text={t("btn_go")}
           icon={<PublicRounded />}
-          w={100}
+          w={120}
         />
       </div>
       <div id="content">

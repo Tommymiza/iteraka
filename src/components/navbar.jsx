@@ -18,9 +18,10 @@ import {
   Divider,
 } from "@mui/material";
 import { ActContext } from "../App";
+import Lang from "./Lang";
 
 const Navbar = () => {
-  const { connected, user, setConnected, width } = useContext(ActContext);
+  const { t, connected, user, setConnected, width } = useContext(ActContext);
   const [anchor, setAnchor] = useState(null);
   const [anchor1, setAnchor1] = useState(null);
   const open = Boolean(anchor);
@@ -33,19 +34,19 @@ const Navbar = () => {
   };
   const menus = [
     {
-      label: "Accueil",
+      label: t("navbar.menus.0"),
       link: "/",
     },
     {
-      label: "Qui sommes-nous?",
+      label: t("navbar.menus.1"),
       link: "/about-us",
     },
     {
-      label: "Nos projets",
+      label: t("navbar.menus.2"),
       link: "/project",
     },
     {
-      label: "Contact",
+      label: t("navbar.menus.3"),
       link: "contact",
     },
   ];
@@ -55,6 +56,7 @@ const Navbar = () => {
         <h1>Teraka</h1>
       </div>
       <ul>
+        <Lang />
         {width > 700 ? (
           menus.map((item) => (
             <NavLink
@@ -111,22 +113,22 @@ const Navbar = () => {
           >
             <MenuItem>
               <PersonAddAlt1 sx={{ width: 20, height: 20 }} />
-              <p>Inscription</p>
+              <p>{t("navbar.avatar.0")}</p>
             </MenuItem>
             <MenuItem>
               <Login sx={{ width: 20, height: 20 }} />
-              <p>Connexion</p>
+              <p>{t("navbar.avatar.1")}</p>
             </MenuItem>
             {connected && (
               <div>
                 <Divider></Divider>
                 <MenuItem>
                   <LibraryBooks sx={{ width: 20, height: 20 }} />
-                  <p>Formation</p>
+                  <p>{t("navbar.avatar.2")}</p>
                 </MenuItem>
                 <MenuItem onClick={() => setConnected(false)}>
                   <Logout sx={{ width: 20, height: 20 }} />
-                  <p>Quitter</p>
+                  <p>{t("navbar.avatar.3")}</p>
                 </MenuItem>
               </div>
             )}
