@@ -1,11 +1,20 @@
 #contact {
-  width: 100vw;
-  height: 100vh;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  background: #efefef;
+  padding-top: 150px;
+  padding-bottom: 50px;
   align-items: center;
-  justify-content: center;
-  & > h3 {
-    color: white;
+  &>h3{
+    align-self: flex-start;
+    margin-left: 10%;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    gap: 20px;
   }
 }

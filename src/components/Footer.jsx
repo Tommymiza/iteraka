@@ -4,7 +4,6 @@ import {
   KeyboardArrowUpRounded,
   HomeRounded,
   LocalPhone,
-  DraftsRounded,
 } from "@mui/icons-material";
 import "../styles/footer.scss";
 
@@ -27,26 +26,42 @@ const Footer = () => {
         <KeyboardArrowUpRounded />
       </IconButton>
       <div>
-        <h3>Nos coordonnées: </h3>
+        <h3>ITERAKA</h3>
         <ul>
           <li>
-            <HomeRounded /> : Ambanidia, Madagascar
+            <HomeRounded />
+            <p>: </p>
+            <div>
+              <p>21 rue du Col de Dyane</p>
+              <p>78180 Montigny le Bretonneux</p>
+              <p>FRANCE</p>
+            </div>
           </li>
           <li>
-            <LocalPhone /> : +33 1 87 40 39 77
-          </li>
-          <li>
-            <DraftsRounded /> : mathieu.rahm@teraka.org,
-            cedric.de.foucault@teraka.org
+            <LocalPhone /> : + 33(0) 6 44 95 15 54
           </li>
         </ul>
       </div>
       <div>
-        <h3>Nos partenaires:</h3>
+        <h3>TERAKA MADAGASCAR</h3>
         <ul>
-          <li>Image Partenaire 1</li>
-          <li>Image Partenaire 2</li>
-          <li>Image Partenaire 3</li>
+          <li>
+            <HomeRounded />
+            <p>: </p>
+            <div>
+              <p>212 route Circulaire Ambanidia</p>
+              <p>Antananarivo 101</p>
+              <p>MADAGASCAR</p>
+            </div>
+          </li>
+          <li>
+            <LocalPhone />
+            <p>: </p>
+            <div>
+              <p>+261 (0) 32 15 951 92</p>
+              <p>+261 (0) 34 88 14 236</p>
+            </div>
+          </li>
         </ul>
       </div>
     </div>

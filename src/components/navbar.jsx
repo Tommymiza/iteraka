@@ -9,14 +9,7 @@ import {
   LibraryBooks,
   MenuRounded,
 } from "@mui/icons-material";
-import {
-  IconButton,
-  Menu,
-  MenuItem,
-  Avatar,
-  Tooltip,
-  Divider,
-} from "@mui/material";
+import { IconButton, Menu, MenuItem, Avatar, Tooltip } from "@mui/material";
 import { ActContext } from "../App";
 import Lang from "./Lang";
 
@@ -111,17 +104,19 @@ const Navbar = () => {
             onClick={() => setAnchor(null)}
             anchorEl={anchor}
           >
-            <MenuItem>
-              <PersonAddAlt1 sx={{ width: 20, height: 20 }} />
-              <p>{t("navbar.avatar.0")}</p>
-            </MenuItem>
-            <MenuItem>
-              <Login sx={{ width: 20, height: 20 }} />
-              <p>{t("navbar.avatar.1")}</p>
-            </MenuItem>
-            {connected && (
+            {!connected ? (
               <div>
-                <Divider></Divider>
+                <MenuItem>
+                  <PersonAddAlt1 sx={{ width: 20, height: 20 }} />
+                  <p>{t("navbar.avatar.0")}</p>
+                </MenuItem>
+                <MenuItem>
+                  <Login sx={{ width: 20, height: 20 }} />
+                  <p>{t("navbar.avatar.1")}</p>
+                </MenuItem>
+              </div>
+            ) : (
+              <div>
                 <MenuItem>
                   <LibraryBooks sx={{ width: 20, height: 20 }} />
                   <p>{t("navbar.avatar.2")}</p>
