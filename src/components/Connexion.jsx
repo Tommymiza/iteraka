@@ -76,7 +76,7 @@ const Connexion = ({ close }) => {
                 id="log-password"
               />
             </ThemeProvider>
-            <Btn icon={<Login />} text={t("login")} w={100} type="submit" />
+            <Btn icon={<Login />} text={t("login")} w={120} type="submit" />
           </FormControl>
         </form>
       </DialogContent>
