@@ -15,7 +15,7 @@ import { ActContext } from "../App";
 import uuid from "react-uuid";
 
 const Inscription = ({ close }) => {
-  const { login, server } = useContext(ActContext);
+  const { login, server, t } = useContext(ActContext);
   const log = (e) => {
     e.preventDefault();
     const tempId = uuid().split("-").join("");
@@ -52,7 +52,7 @@ const Inscription = ({ close }) => {
         variant="h5"
         sx={{ fontWeight: "bold", fontFamily: "var(--fontText)" }}
       >
-        Inscription:
+        {t("signup")}
       </DialogTitle>
       <DialogContent>
         <form onSubmit={log}>
@@ -67,7 +67,7 @@ const Inscription = ({ close }) => {
           >
             <ThemeProvider theme={theme}>
               <TextField
-                label="Nom: "
+                label={t("name")}
                 required
                 inputProps={{
                   style: { fontFamily: "var(--fontText)" },
@@ -88,7 +88,7 @@ const Inscription = ({ close }) => {
                 id="log-datenais"
               />
               <TextField
-                label="Adresse: "
+                label={t("address")}
                 required
                 inputProps={{
                   style: { fontFamily: "var(--fontText)" },
@@ -105,7 +105,7 @@ const Inscription = ({ close }) => {
                 id="log-email"
               />
               <TextField
-                label="Mot de passe: "
+                label={t("password")}
                 required
                 inputProps={{
                   style: { fontFamily: "var(--fontText)" },
@@ -114,7 +114,7 @@ const Inscription = ({ close }) => {
                 id="log-password"
               />
             </ThemeProvider>
-            <Btn icon={<Login />} text="Inscription" w={150} type="submit" />
+            <Btn icon={<Login />} text={t("signup")} w={150} type="submit" />
           </FormControl>
         </form>
       </DialogContent>

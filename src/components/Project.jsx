@@ -108,7 +108,7 @@ const Project = () => {
           }}
           text={t("contact")}
           icon={<AlternateEmail />}
-          w={i18n.language === "en" ? 130 : 170}
+          w={i18n.language.substring(0,2) === "en" ? 130 : 170}
         />
       </div>
     </>

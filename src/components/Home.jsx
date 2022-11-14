@@ -24,7 +24,7 @@ const Home = () => {
           action={handleClick}
           text={t("home.btn_go")}
           icon={<PublicRounded />}
-          w={i18n.language === "fr" ? 100 : 120}
+          w={i18n.language.substring(0,2) === "fr" ? 100 : 120}
         />
       </div>
       <div id="content">
@@ -52,7 +52,7 @@ const Home = () => {
           }}
           text={t("about")}
           icon={<InfoSharp />}
-          w={i18n.language === "fr" ? 200 : 120}
+          w={i18n.language.substring(0,2) === "fr" ? 200 : 120}
         />
       </div>
       <div id="partners">

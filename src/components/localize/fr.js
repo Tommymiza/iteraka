@@ -86,4 +86,9 @@ export const fr_lang = {
     menus: ["Accueil", "Qui sommes-nous?", "Nos projets", "Contact"],
     avatar: ["Inscription", "Connexion", "Formation", "Quitter"],
   },
+  login:"Connexion", 
+  password: "Mot de passe: ",
+  signup: "Inscription",
+  name: "Nom: ",
+  address: "adresse: "
 };

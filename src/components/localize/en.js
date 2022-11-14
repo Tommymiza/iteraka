@@ -86,4 +86,9 @@ export const en_lang = {
     menus: ["Home", "Who are us?", "Our projects", "Contact"],
     avatar: ["Sign up", "Login", "Program", "Logout"],
   },
+  login:"Login", 
+  password: "Password:", 
+  signup: "Sign up",
+  name: "Name: ",
+  address: "address: "
 };

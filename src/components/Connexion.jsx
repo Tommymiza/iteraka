@@ -14,7 +14,7 @@ import Axios from "axios";
 import { ActContext } from "../App";
 
 const Connexion = ({ close }) => {
-  const { login, server } = useContext(ActContext);
+  const { login, server, t } = useContext(ActContext);
   const log = (e) => {
     e.preventDefault();
     Axios({
@@ -43,7 +43,7 @@ const Connexion = ({ close }) => {
         variant="h5"
         sx={{ fontWeight: "bold", fontFamily: "var(--fontText)" }}
       >
-        Connexion:
+        {t("login")}
       </DialogTitle>
       <DialogContent>
         <form onSubmit={log}>
@@ -67,7 +67,7 @@ const Connexion = ({ close }) => {
                 id="log-email"
               />
               <TextField
-                label="Mot de passe: "
+                label={t("password")}
                 required
                 inputProps={{
                   style: { fontFamily: "var(--fontText)" },
@@ -76,7 +76,7 @@ const Connexion = ({ close }) => {
                 id="log-password"
               />
             </ThemeProvider>
-            <Btn icon={<Login />} text="Login" w={100} type="submit" />
+            <Btn icon={<Login />} text={t("login")} w={100} type="submit" />
           </FormControl>
         </form>
       </DialogContent>
