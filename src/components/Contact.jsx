@@ -23,7 +23,7 @@ const Contact = () => {
             required
             sx={{
               width: "70%",
-              minWidth: "400px",
+              minWidth: "300px",
               fontFamily: "var(--fontText)",
             }}
             InputLabelProps={{
@@ -45,7 +45,7 @@ const Contact = () => {
             required
             sx={{
               width: "70%",
-              minWidth: "400px",
+              minWidth: "300px",
               fontFamily: "var(--fontText)",
             }}
             InputLabelProps={{
@@ -68,7 +68,7 @@ const Contact = () => {
             required
             sx={{
               width: "70%",
-              minWidth: "400px",
+              minWidth: "300px",
             }}
             InputLabelProps={{
               style: {

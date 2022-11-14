@@ -13,9 +13,9 @@ const Lang = () => {
             border: "solid 2px black",
             borderRadius: "7px",
         }}>
-            <p onClick={()=>{i18n.changeLanguage("fr")}} style={{margin: 0, cursor: "pointer", color: i18n.language === "fr" ? "var(--primary)" : "black"}}>Fr</p>
+            <p onClick={()=>{i18n.changeLanguage("fr-FR")}} style={{margin: 0, cursor: "pointer", color: i18n.language.substring(0,2) === "fr" ? "var(--primary)" : "black"}}>Fr</p>
             <p style={{margin: 0}}>&nbsp;|&nbsp;</p>
-            <p onClick={()=>{i18n.changeLanguage("en")}} style={{margin: 0, cursor: "pointer", color: i18n.language === "en" ? "var(--primary)" : "black"}}>En</p>
+            <p onClick={()=>{i18n.changeLanguage("en-EN")}} style={{margin: 0, cursor: "pointer", color: i18n.language.substring(0,2) === "en" ? "var(--primary)" : "black"}}>En</p>
         </div>
     );
 }

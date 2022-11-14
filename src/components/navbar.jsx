@@ -12,11 +12,14 @@ import {
 import { IconButton, Menu, MenuItem, Avatar, Tooltip } from "@mui/material";
 import { ActContext } from "../App";
 import Lang from "./Lang";
+import Connexion from "./Connexion"
+import Inscription from "./Inscription";
 
 const Navbar = () => {
-  const { t, connected, user, setConnected, width } = useContext(ActContext);
+  const { t, connected, user, setUser, setConnected, width } = useContext(ActContext);
   const [anchor, setAnchor] = useState(null);
   const [anchor1, setAnchor1] = useState(null);
+  const [dialog, setDialog] = useState();
   const open = Boolean(anchor);
   const open1 = Boolean(anchor1);
   const handleClick = (event) => {
@@ -25,6 +28,11 @@ const Navbar = () => {
   const handleClick1 = (event) => {
     setAnchor1(event.currentTarget);
   };
+  const logout = ()=>{
+    setUser()
+    setConnected(false)
+    document.cookie = "accessKey=; expires=01 Oct 1970 00:00:00 GMT";
+  }
   const menus = [
     {
       label: t("navbar.menus.0"),
@@ -91,7 +99,7 @@ const Navbar = () => {
             <IconButton onClick={handleClick} size="small" sx={{ ml: 2 }}>
               {connected ? (
                 <Avatar sx={{ width: 32, height: 32 }}>
-                  {user.name.substr(0, 1)}
+                  {user.nom.substr(0, 1)}
                 </Avatar>
               ) : (
                 <AccountCircle sx={{ width: 32, height: 32 }} />
@@ -106,11 +114,15 @@ const Navbar = () => {
           >
             {!connected ? (
               <div>
-                <MenuItem>
+                <MenuItem onClick={()=>{
+                  setDialog(<Inscription close={()=>setDialog()} />)
+                }}>
                   <PersonAddAlt1 sx={{ width: 20, height: 20 }} />
                   <p>{t("navbar.avatar.0")}</p>
                 </MenuItem>
-                <MenuItem>
+                <MenuItem onClick={()=>{
+                  setDialog(<Connexion close={()=>setDialog()} />)
+                }}>
                   <Login sx={{ width: 20, height: 20 }} />
                   <p>{t("navbar.avatar.1")}</p>
                 </MenuItem>
@@ -121,7 +133,7 @@ const Navbar = () => {
                   <LibraryBooks sx={{ width: 20, height: 20 }} />
                   <p>{t("navbar.avatar.2")}</p>
                 </MenuItem>
-                <MenuItem onClick={() => setConnected(false)}>
+                <MenuItem onClick={logout}>
                   <Logout sx={{ width: 20, height: 20 }} />
                   <p>{t("navbar.avatar.3")}</p>
                 </MenuItem>
@@ -130,6 +142,7 @@ const Navbar = () => {
           </Menu>
         </li>
       </ul>
+      {dialog}
     </nav>
   );
 };
