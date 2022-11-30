@@ -4,10 +4,8 @@
   padding: 20px;
   z-index: 0;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
   ul {
     list-style: none;
     li {
@@ -21,5 +19,35 @@
         }
       }
     }
+  }
+  p{
+    margin: 0 ;
+  }
+  #partenaire{
+    width: 300px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    align-self: center;
+    &>div{
+      animation: diapo infinite 8s linear;
+      position: relative;
+      width: 300px;
+      img{
+        width: 300px;
+        height: 100px;
+        object-fit: contain;
+      }
+    }
+  }
+}
+@keyframes diapo {
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-900px);
   }
 }

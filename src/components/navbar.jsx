@@ -2,37 +2,19 @@ import React, { useState, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/navbar.scss";
 import {
-  AccountCircle,
-  PersonAddAlt1,
-  Login,
-  Logout,
-  LibraryBooks,
   MenuRounded,
 } from "@mui/icons-material";
-import { IconButton, Menu, MenuItem, Avatar, Tooltip } from "@mui/material";
+import { IconButton, Menu, MenuItem, Tooltip } from "@mui/material";
 import { ActContext } from "../App";
 import Lang from "./Lang";
-import Connexion from "./Connexion"
-import Inscription from "./Inscription";
 
 const Navbar = () => {
-  const { t, connected, user, setUser, setConnected, width } = useContext(ActContext);
-  const [anchor, setAnchor] = useState(null);
+  const { t, width } = useContext(ActContext);
   const [anchor1, setAnchor1] = useState(null);
-  const [dialog, setDialog] = useState();
-  const open = Boolean(anchor);
   const open1 = Boolean(anchor1);
-  const handleClick = (event) => {
-    setAnchor(event.currentTarget);
-  };
   const handleClick1 = (event) => {
     setAnchor1(event.currentTarget);
   };
-  const logout = ()=>{
-    setUser()
-    setConnected(false)
-    document.cookie = "accessKey=; expires=01 Oct 1970 00:00:00 GMT";
-  }
   const menus = [
     {
       label: t("navbar.menus.0"),
@@ -48,17 +30,17 @@ const Navbar = () => {
     },
     {
       label: t("navbar.menus.3"),
-      link: "contact",
+      link: "/contact",
     },
   ];
   return (
     <nav id="navbar">
       <div id="logo">
-        <h1>Teraka</h1>
+        <img src="/images/Logo.png" alt="Logo Teraka" />
       </div>
       <ul>
         <Lang />
-        {width > 700 ? (
+        {width > 800 ? (
           menus.map((item) => (
             <NavLink
               key={item.label}
@@ -94,55 +76,7 @@ const Navbar = () => {
             </Menu>
           </div>
         )}
-        <li>
-          <Tooltip title="Espace personnel">
-            <IconButton onClick={handleClick} size="small" sx={{ ml: 2 }}>
-              {connected ? (
-                <Avatar sx={{ width: 32, height: 32 }}>
-                  {user.nom.substr(0, 1)}
-                </Avatar>
-              ) : (
-                <AccountCircle sx={{ width: 32, height: 32 }} />
-              )}
-            </IconButton>
-          </Tooltip>
-          <Menu
-            open={open}
-            onClose={() => setAnchor(null)}
-            onClick={() => setAnchor(null)}
-            anchorEl={anchor}
-          >
-            {!connected ? (
-              <div>
-                <MenuItem onClick={()=>{
-                  setDialog(<Inscription close={()=>setDialog()} />)
-                }}>
-                  <PersonAddAlt1 sx={{ width: 20, height: 20 }} />
-                  <p>{t("navbar.avatar.0")}</p>
-                </MenuItem>
-                <MenuItem onClick={()=>{
-                  setDialog(<Connexion close={()=>setDialog()} />)
-                }}>
-                  <Login sx={{ width: 20, height: 20 }} />
-                  <p>{t("navbar.avatar.1")}</p>
-                </MenuItem>
-              </div>
-            ) : (
-              <div>
-                <MenuItem>
-                  <LibraryBooks sx={{ width: 20, height: 20 }} />
-                  <p>{t("navbar.avatar.2")}</p>
-                </MenuItem>
-                <MenuItem onClick={logout}>
-                  <Logout sx={{ width: 20, height: 20 }} />
-                  <p>{t("navbar.avatar.3")}</p>
-                </MenuItem>
-              </div>
-            )}
-          </Menu>
-        </li>
       </ul>
-      {dialog}
     </nav>
   );
 };

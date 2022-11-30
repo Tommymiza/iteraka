@@ -1,94 +1,87 @@
 export const fr_lang = {
   home: {
-    welcome: "Bienvenue sur Teraka",
-    first: "Travailler pour un meilleur environnement",
+    welcome: "Bienvenue sur iTeraka",
+    first:
+      "Du sol au ciel, des racines aux fruits notre approche part de la base pour réaliser des impacts positifs durables.",
     second:
       "Nous utilisons des marchés du carbone, des systèmes d'auto-gouvernance et des technologies adaptées pour aider les communautés à améliorer leurs paysages naturels et à en tirer profit.",
     third:
       "Les communautés locales sont cruciales pour les paysages naturels et la préservation de la faune. La garde qu'ils ont des terres est extrêmement importante dans l'adaptation au changement climatique.",
     four: "De nombreuses communautés rurales ont peu ou pas accès à des mécanismes de financement stables tels que la finance carbone en raison de la complexité de la surveillance et de la certification du carbone. D'autre part, un nombre croissant d'entreprises recherchent des opportunités d'élimination du carbone fiables et de haute qualité avec des impacts positifs sur les personnes et la biodiversité.",
     btn_go: "Aller à",
+    tree: [
+      {
+        title:
+          "1. Commencer du sol et des racines - Se lier au terroir - Comprendre les communautés et les paysages",
+        content:
+          "A la base, il y a un terroir, des écosystèmes, des paysages et des communautés humaines auxquels nous devons nous intégrer et que nous devons connaître, écouter, comprendre et inclure pour que les solutions soient efficaces. C’est là que se sèment les graines de génie.  ",
+      },
+      {
+        title:
+          "2. Faire germer - Agir sur le terrain - Faire les choses concrètement",
+        content:
+          "Nous souhaitons que notre travail ait une réalité sur le terrain pour les communautés, l’environnement et les écosystèmes. Nous privilégions l’engagement concret, quantifié et qualifié sur l’intention pure et les beaux discours sans lendemain.",
+      },
+      {
+        title:
+          "3. Grandir solidement - Mesurer les effets - Prouver les impacts",
+        content:
+          "Pour générer de réels bénéfices à partir de nos projets et Solutions fondées sur la Nature, nous enregistrons et mesurons les effets de nos actions selon des méthodes scientifiques robustes (SBTi) et les meilleurs standards internationaux disponibles (VCS, CCB, SD VIsta). Nous faisons quantifier, vérifier et certifier ces impacts par des tierces parties reconnues pour leur compétence et leur intégrité.",
+      },
+      {
+        title:
+          "4. Fructifier - Générer de la valeur - Partager équitablement les bénéfices",
+        content:
+          "Nous participons à la valorisation économique de nouvelles valeurs comme la biodiversité, la séquestration du carbone ou la protection des sols. Nous partageons les bénéfices avec les parties prenantes de ces paysages qui incluent les communautés humaines, mais aussi les écosystèmes naturels, lieux de vie de la faune et la flore sauvage.",
+      },
+      {
+        title:
+          "5. Pousser vers le ciel - Viser des impacts positifs durables - S’engager pour longtemps",
+        content:
+          "Nous souhaitons être fidèles à nos Valeurs et à nos partenaires. Nous nous engageons de manière responsable et durable afin que nos actions aient des résultats positifs sur l’environnement social et naturel pour longtemps.",
+      },
+    ],
   },
+  anjajavy: [
+    "5 type d’habitats dont 2 écotypes en danger ",
+    "34 espèces naturelles en danger",
+    "5 000 bénéficiaires",
+    "A l’initiative de l’Aire Protégée d’Anjajavy il y a la vision de valoriser économiquement et scientifiquement des habitats naturels exceptionnels et en danger du Nord-Ouest sakalava.",
+  ],
+  besalampy: ["x milions d’arbres plantés", "x millions d’arbres à planter"],
+  tsiroanomandidy: ["3500 bénéficiaires"],
+  howtouse: "Comment utiliser cette carte ?",
+  success: "Email envoyé avec succès!",
+  legende: [
+    "Lieu du projet",
+    "Double clique pour voir les détails",
+    "Cliquez pour voir le nom du lieu",
+  ],
+  beneficiaries: "bénéficiaires",
+  species: "espèces",
+  arbre: "arbres plantés",
   emailUs: "Envoyer nous un email :",
-  form:["Nom :", "Email :", "Message :", "Envoyer"],
+  form: ["Nom :", "Email :", "Message :", "Envoyer"],
   contact: "Nous contacter",
-  about: "A propos de nous :",
+  about: "Nous sommes les acteurs d’une nouvelle économie régénérative",
   aboutText1:
-    "iTERAKA est un promoteur de projets de reboisement axés sur les communautés et les paysages naturels",
+    "Nous sommes une équipe internationale de fondateurs, acteurs expérimentés de terrain, professionnels compétents du développement durable, des communautés rurales, du carbone forestier et des solutions fondées sur la nature.",
   aboutText2:
-    "iTERAKA est enregistrée en tant que Société à Responsabilité Limitée française basée en région parisienne, en France, avec une concentration géographique des actions sur Madagascar et l'Afrique.",
-  OurMissionTitle: "Notre mission :",
-  OurMission:
-    "Nous aidons des groupes de petits exploitants à améliorer leurs terres en plantant et en entretenant des arbres sur des terres dégradées ou inutilisées et contribuons à la protection des actifs naturels comme l'accès à l'eau et la conservation de la biodiversité. Ce faisant, nous participons également à accroître l'impact positif sur tous les objectifs de développement durable des Nations Unies (ODD de l'ONU).",
-  what: "Qu'est-ce qu'on fait ?",
-  whatDo: [
-    "Nous aidons à la formation de petits groupes d'agriculteurs et dispensons des formations techniques",
-    "Nous versons des micro-paiements réguliers aux petits exploitants agricoles pour chaque arbre planté et établi",
-    "Nous quantifions et vérifions régulièrement les crédits et les faisons vendre sur les marchés du carbone",
-    "Les petits agriculteurs reçoivent une part importante du bénéfice net des crédits",
-    "Les agriculteurs en retirent également d'importants avantages non liés au carbone",
-  ],
-  how: "Comment on fait ?",
-  howDo: [
-    {
-      title:
-        "Nous atteindrons nos objectifs de développement grâce au développement et à l'utilisation de :",
-      elem: [
-        "Systèmes de formation et de gouvernance pour le leadership communautaire",
-        "Des outils pour surveiller, signaler et vérifier la plantation d'arbres, l'élimination du carbone et les services écosystémiques",
-        "Mécanisme financier adapté pour l'incitation aux bonnes pratiques et le paiement des réductions et des suppressions efficaces de GES",
-      ],
-    },
-  ],
-  our: "Notre équipe :",
-  ourTeam: [
-    "Cédric de FOUCAULT HEC Paris, HEC Montréal, IAE Bordeaux MBA, Créateur et Gérant d'Aire Protégée, Relais & Château Ecolodge MD, Consultant volontaire marché carbone",
-    "Mathieu RAHM, Ingénieur forestier, Expert télédétection et suivi carbone, expert REDD+",
-  ],
-  partner: "Nos partenaires :",
-  ourPartners: [
-    "ASA Ampasipotsy",
-    "PARTAGE Antananarivo",
-    "TIST / CAAC USA",
-    "Anjajavy le Lodge Madagascar",
-    "Aqualma / Unima Madagascar",
-  ],
-  quality: "Critères de qualité de nos projets :",
-  qualityCriteria: [
-    { title: "Audit tiers" },
-    {
-      title: "Quantification robuste des émissions et absorptions de GES",
-      elem: [
-        "Additionnalité évaluant les résultats nets de l'intervention",
-        "Les risques de permanence sont résolument résolus ",
-        "Éviter les doubles comptages et les doubles utilisations",
-      ],
-    },
-    {
-      title: "Bonne gouvernance inclusive",
-      elem: [
-        "Consultation des parties prenantes",
-        "Autodétermination des communautés locales",
-        "L'égalité femmes-hommes dans la gouvernance des groupes",
-        "Transparence du partage des bénéfices",
-      ],
-    },
-    {
-      title: "Des co-bénéfices forts",
-      elem: [
-        "Valeur économique du foncier renforcée",
-        "Habitat naturel et biodiversité valorisés ",
-        "Résilience et adaptation du paysage",
-      ],
-    },
-  ],
+    "Nous avons la volonté première d’agir positivement et efficacement pour le bien-être humain et l’environnement naturel des paysages et communautés avec lesquels nous œuvrons. ",
+  aboutText3:
+    "Nous pensons que les solutions sont plus efficaces si elles s'intègrent à l’économie existante. Nous souhaitons participer à l’émergence et au renforcement d’écosystèmes économiques innovants construits autour de la valorisation nouvelle de co-bénéfices sociaux et environnementaux.",
   navbar: {
-    menus: ["Accueil", "Qui sommes-nous?", "Nos projets", "Contact"],
+    menus: [
+      "Notre approche",
+      "Qui sommes-nous?",
+      "Nos projets",
+      "Nous contacter",
+    ],
     avatar: ["Inscription", "Connexion", "Formation", "Quitter"],
   },
-  login:"Connexion", 
+  login: "Connexion",
   password: "Mot de passe: ",
   signup: "Inscription",
   name: "Nom: ",
-  address: "adresse: "
+  address: "adresse: ",
 };

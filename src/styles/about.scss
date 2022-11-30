@@ -1,15 +1,5 @@
-.about{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding-bottom: 100px;
-  padding-left: 10%;
-  padding-right: 10%;
-  align-items: center;
-  background: #efefef;
-  flex-wrap: wrap;
-  gap: 10px;
-  div{
+.about {
+  div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,19 +7,74 @@
     min-width: 300px;
     max-width: 40%;
     text-align: justify;
-    img{
+    img {
       width: 100%;
       border-radius: 7px;
       object-fit: contain;
       min-width: 300px;
+      transition: 0.3s;
+      z-index: 3;
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 }
-.about.reverse{
+#firstAbout{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  h1 {
+    font-size: 40px;
+    font-family: 'Gumela';
+    margin: 0 10%;
+    color: white;
+    font-weight: lighter;
+    font-style: italic;
+    z-index: -1;
+    text-shadow: 1px 1px 15px black;
+  }
+}
+.bg {
+  height: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.text {
+  font-size: 30px;
+  bottom: 0;
+  height: 20%;
+  left: 0;
+  background-color: #efefef;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.reverse {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  position: relative;
   flex-direction: row-reverse;
+  background-color: #dfdbdb;
+  padding: 5% 10%;
+  height: fit-content;
 }
 @media screen and (max-width: 1019px) {
-  .about.reverse{
+  .about.reverse {
     flex-direction: row;
   }
 }

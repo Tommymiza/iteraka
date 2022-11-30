@@ -5,13 +5,19 @@ nav#navbar {
   display: flex;
   flex-direction: row;
   width: calc(100vw - 40px);
-  height: 60px;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background: white;
-  box-shadow: 15px 0px 15px black;
+  background: rgba($color: #dfdbdb, $alpha: 0.3);
+  backdrop-filter: blur(3px);
+  box-shadow: 10px 0px 20px rgba($color: #000000, $alpha: 0.5);
   z-index: 2;
+  transition: 0.5s;
+  #logo{
+    img{
+      width: 200px;
+    }
+  }
   ul {
     list-style: none;
     display: flex;
