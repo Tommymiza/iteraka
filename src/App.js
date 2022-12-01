@@ -7,6 +7,7 @@ import About from "./components/About";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Test from "./components/Test"
 import i18n from "i18next";
 import { initReactI18next, useTranslation } from "react-i18next";
 import { en_lang } from "./components/localize/en";
@@ -54,6 +55,7 @@ function App() {
             <Route path="/about-us" element={<About />} />
             <Route path="/project" element={<Project />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/*" element={<Test />}></Route>
           </Routes>
         </section>
         <Footer />
