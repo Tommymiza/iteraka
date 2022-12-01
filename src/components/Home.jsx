@@ -19,19 +19,19 @@ const Home = () => {
     },
     {
       x1: "calc(100% - 150px)",
-      y1: "158vh",
+      y1: "156vh",
       x2: "50%",
       y2: "168vh",
     },
     {
       x1: "150px",
-      y1: "108vh",
+      y1: "106vh",
       x2: "52%",
       y2: "120vh",
     },
     {
       x1: "calc(100% - 150px)",
-      y1: i18n.language.substring(0, 2) === "fr" ? "60vh" : "58vh",
+      y1: i18n.language.substring(0, 2) === "fr" ? "58vh" : "56vh",
       x2: "49%",
       y2: "88vh",
     },
@@ -75,7 +75,7 @@ const Home = () => {
       id: "panel5",
       title: t("home.tree.4.title"),
       content: t("home.tree.4.content"),
-      top: "-160vh",
+      top: "-157vh",
       left: "0",
     },
   ];
@@ -158,7 +158,7 @@ const Home = () => {
                   borderRadius: "7px",
                   boxShadow: "0 0 15px rgba(0,0,0,0.5)",
                   background:
-                    panel === item.id ? "white" : "rgba(255,255,255,0.5)",
+                    panel === item.id ? "white" : "#dfdbdb",
                   width: "300px",
                 }}
                 id={item.id}
